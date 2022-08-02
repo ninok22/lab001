@@ -12,6 +12,7 @@ const aCar = {
     model : 'Corolla',
     cc : 1.8
   },
+  features : [ 'Parking assist', 'Alarm', 'Two-bar'],
   registration : {
     year: 201,
     county: 'WD',
@@ -48,4 +49,18 @@ console.log(
   'First owner : ' +  
   aCar.previous_owners[0].name + ' - ' +
   aCar.previous_owners[0].address
-  )
+  );
+
+  // Loop - list of features
+  for (let i = 0; i < aCar.features.length; i += 1) {
+    console.log(aCar.features[i]);
+  }
+
+  // Loop - list of previous owner names
+  for (let i = 0; i < aCar.previous_owners.length; i += 1) {
+    console.log(aCar.previous_owners[i].name);
+  }
+
+  for (let p in aCar.type) {
+     console.log(p.toUpperCase() + ' = ' + aCar.type[p]);
+  }
